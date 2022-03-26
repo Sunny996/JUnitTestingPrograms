@@ -88,4 +88,22 @@ public class JUnitTestingPrograms {
         while (Math.abs(t - c / t) > Math.exp(-15) * t);
         return t;
     }
+
+    public static String toBinary(int n) {
+        int i = 10;
+        int[] arr = new int[8];
+        String str = "";
+        do {
+            if (Math.pow(2, i) <= n) {
+                n = (n - ((int) Math.pow(2, i)));
+                arr[i] = 1;
+                i--;
+            } else
+                i--;
+        }
+        while (i >= 0 && n > 0);
+        for (int b : arr)
+            str += b;
+        return str;
+    }
 }
