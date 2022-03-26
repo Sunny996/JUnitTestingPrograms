@@ -62,4 +62,15 @@ public class JUnitTestingPrograms {
         }
         return day;
     }
+    public static double tempConversion(double temp) {
+        System.out.println("Type A for C to F conversion");
+        System.out.println("Type B for F to C conversion");
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        if (ch == 'A' || ch == 'a')
+            temp = temp * 9.0 / 5 + 32;
+        else if (ch == 'B' || ch == 'b')
+            temp = (temp - 32) * 5.0 / 9;
+        return temp;
+    }
 }
