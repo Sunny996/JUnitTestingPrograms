@@ -81,4 +81,11 @@ public class JUnitTestingPrograms {
         double payment = P * r / (1 - Math.pow(1 + r, -n));
         return payment;
     }
+
+    public static double sqrt(int c) {
+        double t = c;
+        do t = (c / t + t) / 2;
+        while (Math.abs(t - c / t) > Math.exp(-15) * t);
+        return t;
+    }
 }
