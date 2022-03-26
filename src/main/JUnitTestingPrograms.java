@@ -62,6 +62,7 @@ public class JUnitTestingPrograms {
         }
         return day;
     }
+
     public static double tempConversion(double temp) {
         System.out.println("Type A for C to F conversion");
         System.out.println("Type B for F to C conversion");
@@ -72,5 +73,12 @@ public class JUnitTestingPrograms {
         else if (ch == 'B' || ch == 'b')
             temp = (temp - 32) * 5.0 / 9;
         return temp;
+    }
+
+    public static double monthlyPayment(double P, double Y, double R) {
+        double r = R / (12 * 100);
+        double n = 12 * Y;
+        double payment = P * r / (1 - Math.pow(1 + r, -n));
+        return payment;
     }
 }
