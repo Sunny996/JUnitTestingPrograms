@@ -102,8 +102,8 @@ public class JUnitTestingPrograms {
                 i--;
         }
         while (i >= 0 && n > 0);
-        for (int b : arr)
-            str += b;
+        for (int b=arr.length-1;b>=0;b--)
+            str += Integer.toString(arr[b]);
         return str;
     }
 }
