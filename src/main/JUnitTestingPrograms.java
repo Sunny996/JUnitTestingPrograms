@@ -97,9 +97,8 @@ public class JUnitTestingPrograms {
             if (Math.pow(2, i) <= n) {
                 n = (n - ((int) Math.pow(2, i)));
                 arr[i] = 1;
-                i--;
-            } else
-                i--;
+            }
+            i--;
         }
         while (i >= 0 && n > 0);
         for (int b=arr.length-1;b>=0;b--)
