@@ -89,18 +89,18 @@ public class JUnitTestingPrograms {
         return t;
     }
 
-    public static String toBinary(int n) {
+    public static String toBinary(int num) {
         int i = 10;
         int[] arr = new int[8];
         String str = "";
         do {
-            if (Math.pow(2, i) <= n) {
-                n = (n - ((int) Math.pow(2, i)));
+            if (Math.pow(2, i) <= num) {
+                num = (num - ((int) Math.pow(2, i)));
                 arr[i] = 1;
             }
             i--;
         }
-        while (i >= 0 && n > 0);
+        while (i >= 0 && num > 0);
         for (int b=arr.length-1;b>=0;b--)
             str += Integer.toString(arr[b]);
         return str;
