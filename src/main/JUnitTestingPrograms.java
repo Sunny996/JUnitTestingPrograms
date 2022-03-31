@@ -4,19 +4,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class JUnitTestingPrograms {
-    public static int minNoOfNotes(int n) {
+    public static int minNoOfNotes(int num) {
         int minNoOfNotes = 0;
         int[] arr = {1000, 500, 100, 50, 10, 5, 2, 1};
         int[] arr1 = new int[8];
-        while (n > 0) {
-            if (n >= arr[0]) {
+        while (num > 0) {
+            if (num >= arr[0]) {
                 arr1[0]++;
-                n -= arr[0];
+                num -= arr[0];
             }
             for (int i = 0; i < 7; i++) {
-                if (n >= arr[i + 1] && n < arr[i]) {
+                if (num >= arr[i + 1] && num < arr[i]) {
                     arr1[i + 1]++;
-                    n -= arr[i + 1];
+                    num -= arr[i + 1];
                 }
             }
         }
